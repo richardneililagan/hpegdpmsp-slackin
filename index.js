@@ -8,10 +8,10 @@
  */
 
 var server = require('slackin')({
-  token : 'xoxp-8874777431-8889439922-8890749104-e34e7c',
-  org : 'hpegdpmsp',
+  token : process.env.SLACK_API_TOKEN,
+  org : process.env.SLACK_API_ORGANIZATION,
   interval : 1000,
   silent : false
 });
 
-server.listen(3000);
+server.listen(process.env.PORT || 3000);

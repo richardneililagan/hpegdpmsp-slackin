@@ -9,6 +9,14 @@ a Docker container.
 
 Ensure that [Docker is installed on your host machine](https://docs.docker.com/installation/).
 
+Modify the `Dockerfile`'s `ENV` declarations to use your own values:
+
+- `SLACK_API_TOKEN` : a token created for use in communicating with the Slack Web API. See https://api.slack.com/web. The user generating the token should be an admin role.
+
+- `SLACK_API_ORGANIZATION` : your Slack team's subdomain.
+
+- `PORT` : what port to listen in on. Make sure that you're mapping the right port numbers on Docker container initialization (see below).
+
 Create an image from this repository's files by running :
 
 ```bash
@@ -25,8 +33,8 @@ docker run -p 3000:3000 -d <image name>:<tag>
 # e.g. docker run -p 3000:3000 -d richardneililagan/mspslackin:0.1.0
 ```
 
-> **Note** : The `Dockerfile` in this repo exposes port 3000 statically, 
-> so make sure that you're mapping the container port 3000 to a port you
+> **Note** : The `Dockerfile` in this repo exposes port 3000 by default, 
+> so make sure that you're mapping the right container port to a port you
 > want on the host machine.
 >
 > On the example above, `-p 3000:3000` maps the host port 3000 to the 
