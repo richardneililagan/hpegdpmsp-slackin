@@ -1,0 +1,14 @@
+{
+  "name": "msp-slackin",
+  "version": "0.1.4",
+  "description": "Automated Slack invites for HPE GDP MSP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Neil Ilagan",
+  "license": "MIT",
+  "dependencies": {
+    "slackin": "^0.5.1"
+  }
+}
